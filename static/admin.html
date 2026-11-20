@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — HappyMiles Tours</title>
+  <link rel="icon" type="image/svg+xml" href="/static/images/logo/happymiles-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+
+  <!-- Admin Header -->
+  <header class="admin-header">
+    <div class="admin-brand">
+      <img src="/static/images/logo/happymiles-logo.svg" alt="HappyMiles Tours">
+      <span style="font-size:0.85rem;background:#0b8a8f;color:#fff;padding:4px 10px;border-radius:12px;font-weight:600;">ADMIN PORTAL</span>
+    </div>
+
+    <div class="admin-nav">
+      <a href="/" target="_blank" style="text-decoration:none;font-size:0.9rem;color:#0b8a8f;font-weight:500;">View Public Website ↗</a>
+      <button id="btn-admin-logout" style="padding:6px 14px;border-radius:8px;background:#fee2e2;color:#991b1b;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <!-- Stats Overview Cards -->
+    <div class="admin-stats-grid">
+      <div class="stat-box">
+        <div class="stat-box-title">Total Bookings</div>
+        <div class="stat-box-val" id="stat-total-bookings">0</div>
+      </div>
+      <div class="stat-box" style="border-left:4px solid #0284c7;">
+        <div class="stat-box-title">Payment Submitted (Need Verification)</div>
+        <div class="stat-box-val" style="color:#0284c7;" id="stat-pending-utr">0</div>
+      </div>
+      <div class="stat-box" style="border-left:4px solid #16a34a;">
+        <div class="stat-box-title">Confirmed / Paid</div>
+        <div class="stat-box-val" style="color:#16a34a;" id="stat-confirmed">0</div>
+      </div>
+      <div class="stat-box" style="border-left:4px solid #ff7a1a;">
+        <div class="stat-box-title">Total Revenue (Verified)</div>
+        <div class="stat-box-val" style="color:#ff7a1a;" id="stat-revenue">₹0</div>
+      </div>
+    </div>
+
+    <!-- Bookings Management Section -->
+    <div class="admin-controls-card">
+      <div class="status-tabs">
+        <button class="status-tab active" data-status="all">All Bookings</button>
+        <button class="status-tab" data-status="payment_submitted" style="background:#e0f2fe;color:#0369a1;">Payment Submitted</button>
+        <button class="status-tab" data-status="paid" style="background:#dcfce7;color:#15803d;">Paid</button>
+        <button class="status-tab" data-status="confirmed" style="background:#d1fae5;color:#065f46;">Confirmed</button>
+        <button class="status-tab" data-status="pending" style="background:#fef3c7;color:#92400e;">Pending</button>
+        <button class="status-tab" data-status="cancelled" style="background:#fee2e2;color:#991b1b;">Cancelled</button>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:center;">
+        <div class="search-box">
+          <input type="text" id="admin-search-input" placeholder="Search by name, phone, ref, UTR...">
+        </div>
+        <button id="btn-export-csv" style="padding:8px 16px;border-radius:20px;background:#0b8a8f;color:#fff;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;display:flex;align-items:center;gap:6px;">
+          📥 Export CSV
+        </button>
+      </div>
+    </div>
+
+    <!-- Bookings Data Table -->
+    <div class="admin-table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Reference</th>
+            <th>Customer</th>
+            <th>Trip & Batch</th>
+            <th>Amount Paid / Total</th>
+            <th>UTR / Transaction Ref</th>
+            <th>Current Status</th>
+            <th>Update Status</th>
+          </tr>
+        </thead>
+        <tbody id="bookings-tbody">
+          <tr><td colspan="7" style="text-align:center;padding:2rem;">Loading bookings data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Packages Management Section -->
+    <div style="margin-top:3.5rem;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;">
+        <div>
+          <h2 style="font-size:1.4rem;margin:0;">Tour Packages (Catalog & Status)</h2>
+          <p style="color:#64748b;font-size:0.9rem;margin:4px 0 0;">Toggle active status or manage batch rates.</p>
+        </div>
+      </div>
+
+      <div id="packages-admin-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(360px, 1fr));gap:1rem;">
+        <!-- Packages injected dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/js/admin.js"></script>
+</body>
+</html>

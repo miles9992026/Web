@@ -1,0 +1,167 @@
+{
+  "happy_customers": [
+    {
+      "id": "coorg-bylakuppe-monastery",
+      "src": "static/images/happy-customers\\coorg-bylakuppe-monastery.webp",
+      "src_card": "static/images/happy-customers\\coorg-bylakuppe-monastery-900w.webp",
+      "src_thumb": "static/images/happy-customers\\coorg-bylakuppe-monastery-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoYAA0APxFysFAsJqSisAgBgCIJZACo9CPz8mAPGbqf/a7NOwAA/qLLY72HNevNGZAIx/DmQIesu7cluHTBXxqrotk/0tXgq4b4XaQTgLfwDkE83LeGJOS7SQZdO1NSgkWoAPmTXEKIsxUuk7yOu49VzPeSrh1WqMyxO3Nq5Kw88b/szY76QNY9YHx/CAAA",
+      "width": 1280,
+      "height": 720,
+      "alt": "Happy travelers with Buddhist monk at Namdroling Monastery Bylakuppe, Coorg trip",
+      "tags": [
+        "all",
+        "coorg"
+      ]
+    },
+    {
+      "id": "chikmagalur-coffee-trail-trek",
+      "src": "static/images/happy-customers\\chikmagalur-coffee-trail-trek.webp",
+      "src_card": "static/images/happy-customers\\chikmagalur-coffee-trail-trek-900w.webp",
+      "src_thumb": "static/images/happy-customers\\chikmagalur-coffee-trail-trek-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRigBAABXRUJQVlA4IBwBAADwBgCdASoYACoAPxF2rFKsJyOiqqwBgCIJQBdmf5Ddq6Ae9O1kvKokR+2pTRHi8sDB7125tufVBOPe7Seb3f7yAP6fQOwCNNfesqJJGMFqZV2K8Q3BnyUvf9IjD5fBoMLGmiv0G8lRLDhqp6i12iY4FqXeiiyrvD+KDcTxFlpDsEaVHhLxvF8huuamX2slqLp0VZbUaayKWvWdZCqDwgVEF3HH2+XGnasCZpDb3GJmhQ+IcQyKLJAzt0VldN6o5IOgHClYEa6RdIjHsxGOxN1g0iEqTzLXXeipSkRwxRasTzjbM/XoxqcDYpp/BUMP6BIyP6tOP0DaflN90FjUcvRHMGisGU//v23V6C7szrvAsuIjsq9kTYEYbAAAAA==",
+      "width": 900,
+      "height": 1600,
+      "alt": "Trekking through misty coffee plantation trail during Chikmagalur weekend trip",
+      "tags": [
+        "all",
+        "chikmagalur"
+      ]
+    },
+    {
+      "id": "coorg-viewpoint-rockfall",
+      "src": "static/images/happy-customers\\coorg-viewpoint-rockfall.webp",
+      "src_card": "static/images/happy-customers\\coorg-viewpoint-rockfall-900w.webp",
+      "src_thumb": "static/images/happy-customers\\coorg-viewpoint-rockfall-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQAwCdASoYAA0APxFysFAsJqSisAgBgCIJYgC26KnBgAruWXoMg6AA/rQkkmm4tADQshS0tLmEghUwzM/0A0Qlw9YdiWeSQ9KoGTGRum72xzovg2NJtCD+3l/5hAvp07BoH04AxgkOcXQLewUZLK64d48Hq/9dcYgdaPNKLSUAAA==",
+      "width": 1280,
+      "height": 720,
+      "alt": "HappyMiles group smiling at scenic waterfall viewpoint in Coorg",
+      "tags": [
+        "all",
+        "coorg"
+      ]
+    },
+    {
+      "id": "maddur-highway-journey-stop",
+      "src": "static/images/happy-customers\\maddur-highway-journey-stop.webp",
+      "src_card": "static/images/happy-customers\\maddur-highway-journey-stop-900w.webp",
+      "src_thumb": "static/images/happy-customers\\maddur-highway-journey-stop-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoYAAwAPxFysFAsJqSisAgBgCIJQBfnAtvftUFIat9FWPgA/tOIldpIN9fzbvxhTlVZQ6XXi1gvevQDv8HmJ9yQWTFiMS9KzKXSmdFhgDgwg+eLcIp9emtW+nyiM34jtIW/H0vXVWPSjkl0AAA=",
+      "width": 1600,
+      "height": 803,
+      "alt": "Happy travelers taking a refreshing breakfast break at Maddur highway stop",
+      "tags": [
+        "all",
+        "coorg",
+        "chikmagalur"
+      ]
+    },
+    {
+      "id": "travelers-welcome-departure",
+      "src": "static/images/happy-customers\\travelers-welcome-departure.webp",
+      "src_card": "static/images/happy-customers\\travelers-welcome-departure-900w.webp",
+      "src_thumb": "static/images/happy-customers\\travelers-welcome-departure-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA0APxFysFAsJqSisAgBgCIJYwAAXb8LDF1o6I2RChEAAP68NgfRkJ3m7enfhsh71B4jLUGmippz14XF8cyycdNJ+GWmI7mxaQianX+P+X435wGFxj0WMXWPL1VhYC83bG28PNWpq2bi+lXBnzn7zleMzq4RRh7L+BKHuEj2MAAA",
+      "width": 1600,
+      "height": 900,
+      "alt": "Excited group selfie getting ready to embark on Karnataka road adventure",
+      "tags": [
+        "all",
+        "coorg",
+        "chikmagalur"
+      ]
+    }
+  ],
+  "places": {
+    "coorg-chikmagalur": {
+      "id": "coorg-chikmagalur-poster",
+      "src": "static/images/places\\coorg-chikmagalur\\coorg-chikmagalur-poster.webp",
+      "src_card": "static/images/places\\coorg-chikmagalur\\coorg-chikmagalur-poster-900w.webp",
+      "src_thumb": "static/images/places\\coorg-chikmagalur\\coorg-chikmagalur-poster-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAABwBQCdASoYAB4APxF2sFAsJ6SisAgBgCIJagCdIW0g0w1ksIE/T9V1tYjXnQyI05DCzxQoAP658rVCDau0Fvfi9M/w8GSkd0F2RPRi85xJ0IJAUDKIgJVyuiOOHBTqy6w2lqUFQI1SnWveMTVvIWRKhl0bFPLDGAIvdE2c7MT9aNTfLh6uHP5C6acWYmQ4WH4nb3bP8yvxbWGhBNYQZv4FacAmXdzIlSgnsdarqEPQY9sPrlXNJVSoSqvl+Y8GUzOtRRUE+gJ+3perptZJg+rHqHeiKi0p29I3lbHcXY0wUjV4XWJ8QTtEJFpsRigA",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Coorg & Chikmagalur 3 Days 2 Nights Coffee Hills tour package from Hyderabad",
+      "tags": [
+        "coorg-chikmagalur"
+      ]
+    },
+    "araku-vanjangi-lambasingi": {
+      "id": "araku-vanjangi-poster",
+      "src": "static/images/places\\araku-vanjangi-lambasingi\\araku-vanjangi-poster.webp",
+      "src_card": "static/images/places\\araku-vanjangi-lambasingi\\araku-vanjangi-poster-900w.webp",
+      "src_thumb": "static/images/places\\araku-vanjangi-lambasingi\\araku-vanjangi-poster-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAABwBQCdASoYAB4APxF4tVOsJyUiqAqpgCIJYgCxHzFv/gGvwRV0Z/4J+PD1Drkiv0W1SzAAAPzxCCYcZkM9tJhd5V//fUPzdRVWT+xtowFIHOy0HqGEOE0ZWq+zfFb4w3QalHDoyP8dPI8/u+0xReF2Krz5CtPHTCHEbgiwzqoz44ii6Aorq029cR0b6uxErXT8EIFfllRVUzaCH1r7+LrLieJSm6Ck+YOeMgmdv9RBso0kKrvL40+NrGIxp/CiOKwAAA==",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Araku Valley, Vanjangi Sea of Clouds & Lambasingi 4 Days tour package from Hyderabad",
+      "tags": [
+        "araku-vanjangi-lambasingi"
+      ]
+    },
+    "gokarna-dandeli-murudeshwar": {
+      "id": "gokarna-dandeli-poster",
+      "src": "static/images/places\\gokarna-dandeli-murudeshwar\\gokarna-dandeli-poster.webp",
+      "src_card": "static/images/places\\gokarna-dandeli-murudeshwar\\gokarna-dandeli-poster-900w.webp",
+      "src_thumb": "static/images/places\\gokarna-dandeli-murudeshwar\\gokarna-dandeli-poster-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAACwBgCdASoYAB4APxFws1MsJaSisBgIAYAiCWwAnTKB9gNvdsf+vgRNvpqACVhgfz3WmiADNYOsttz3wh3cAAD+1yRTqmNCsag5QlAAPodvWueNqTbbEdnzSpsukcgEIGhjzJFqtM+FWIqQEfirnSE5NiN3a8YHDY4nweygUdOwL/0gNWjJ/XQVYVumloyTaUcKgEyfI6RCSTP2Iq4WW8gRcXu88TK28oq8TxL6y2Yvq7m4cAcrt8yK6PQ+7gwS104qy7k4Sz/3gjC6kx+NErJbWqgSLxzbX2QYFt7Yt8CB5csRfN4PTVx4I9U5a/bmfZnXetrfyadVs9S1M2OAAA==",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Gokarna, Dandeli Rafting & Murudeshwar 3 Days coastal adventure package",
+      "tags": [
+        "gokarna-dandeli-murudeshwar"
+      ]
+    },
+    "kerala": {
+      "id": "kerala-poster",
+      "src": "static/images/places\\kerala\\kerala-poster.webp",
+      "src_card": "static/images/places\\kerala\\kerala-poster-900w.webp",
+      "src_thumb": "static/images/places\\kerala\\kerala-poster-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAACwBgCdASoYACIAPxF6rlIsJ6QiqqwBgCIJbAC1Gsp6BshhUAvRoT+eTSKVxJ7aa09wm7EAkt9SJfk9m93dAADOPaZwNaaRFmWbjzAnmcTlExpglTAvXl1DtWeTQSVyiX/U/vyVCbYJX1p/pRRANDGEW4iWkdNfSUwnlMPitR8KtOmYX7BDacSQQKxIKLc8V2xw5jTMVFHKK3oBWFabZk6oyUTsiWNfMkzcuB7EYNBVFE5lkX1B9RxVOGMD78DDtp8e2DDPwUwucKvTvO3dsaDgKsL/oF0hR5dEHDfvvJQq7Yc9vq5CQUxY+DBQGusZQAAAAA==",
+      "width": 900,
+      "height": 1280,
+      "alt": "Kerala God Own Country 5 Days Alleppey Houseboat Munnar Tea Gardens package",
+      "tags": [
+        "kerala"
+      ]
+    },
+    "ooty-coonoor": {
+      "id": "ooty-coonoor-poster",
+      "src": "static/images/places\\ooty-coonoor\\ooty-coonoor-poster.webp",
+      "src_card": "static/images/places\\ooty-coonoor\\ooty-coonoor-poster-900w.webp",
+      "src_thumb": "static/images/places\\ooty-coonoor\\ooty-coonoor-poster-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAAAQBgCdASoYAB4APxF4slIsJySisBgIAYAiCWYAnTLiN6TQA5St9lARZ7z8XKjfUPd8CtFjA2xEhgAA/gTCpXmFZPYMnwRwratEQSJRP67JlE8PMqrFmgSvupmUDr43CMm5G8fRABkut3jL4xoPTctIXkrX4uPJAsi6FkaqgC+luyjdTIfB9yRASK9uEL/Jw6aPrBEgJYGdZnbhFIAD3MUP5Vb54/gYLlcToCUyV2Hw5ZaiyEfLjLhOjNaa+6dczCGVeZ1N0plh+kj/c91Ly3NnAegCkvQ8Pf/RhpquublQdHOuGvnGxg187P61UAAA",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Ooty & Coonoor 3 Days Queen of Hills Backpacking tour with Free Toy Train ride",
+      "tags": [
+        "ooty-coonoor"
+      ]
+    },
+    "shimla-manali": {
+      "id": "shimla-manali-poster",
+      "src": "static/images/places\\shimla-manali\\shimla-manali-poster.webp",
+      "src_card": "static/images/places\\shimla-manali\\shimla-manali-poster-900w.webp",
+      "src_thumb": "static/images/places\\shimla-manali\\shimla-manali-poster-400w.webp",
+      "placeholder": "data:image/webp;base64,UklGRkABAABXRUJQVlA4IDQBAAAwBwCdASoYACgAPxF8tFOsJ6SiqqgBgCIJbACpJ8F+ZnoG9I4n065KXg+mrS7wWsq+nmQTkAsghoZ7WGiKx/Zv0ZAAzirT64MfooJs9E2OfQVSGLAtPFdItDF0/+0a9N298hU5ep9KppAc6HBgxySjafp6XrvMkLWwz74M7IYieiEgojC2oLtuNZgvUKhv/3RoF+QVUNYjDNgYvxgLDtLSzGh60wQko6+cTpDQza1Hbnrw9I+HAUGwOxhmjUYp+R2AUztV7tdlpmXBB4htoAfBzXZursJfyQi+3be7QfkXJuRqgBcUrBweB5BL1Wdw9vynDUjPQGow57/zQmPPJ8lyGbk/64mANoAYyw+fIAhR3//KPplt40g8EH6+sWex16m5DEAmPrpA7hH64Duf8CAjWmkAAA==",
+      "width": 941,
+      "height": 1600,
+      "alt": "Himachal Shimla, Manali, Kasol & Manikaran 6 Days snow peaks tour package",
+      "tags": [
+        "shimla-manali"
+      ]
+    }
+  },
+  "payment": {
+    "id": "kotak-upi-qr",
+    "src": "static/images/payment\\kotak-upi-qr.webp",
+    "src_card": "static/images/payment\\kotak-upi-qr-900w.webp",
+    "src_thumb": "static/images/payment\\kotak-upi-qr-400w.webp",
+    "placeholder": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAACQBgCdASoYADQAPxF6tVMsJ6UipA2xgCIJQAHSf3BF1FQ1usu88oTa8uX5O2c1sB8Y6yH4J0QlGwaAVD9AAP73cxatp3T4f2y2k53UCRZuQWyOq72edErn6whogPjStx21On+FV09fOw54vzHk3Tiq9F5qpjPMLSAbWfOcEWXq4QJIK172bzZho34jlNItINvAbBCmfeU2RRI1O3kx/0/O/R2b5Re4dxf0H8bAYvds6Fis4UwSwX9iFx2++zW7qPttCelw9mIde0YVzv3lpg64BrB307iSCKxs4NXo0vnKqsIfHybeMRL3OPqa+cLNd1Wni9u5sNp7RwAA",
+    "width": 636,
+    "height": 1386,
+    "alt": "Kotak 811 UPI QR Code for Miryala Bharath 7661981338@kotakbank",
+    "tags": []
+  }
+}

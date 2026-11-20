@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="hmIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b8a8f"/>
+      <stop offset="100%" stop-color="#055b5f"/>
+    </linearGradient>
+    <linearGradient id="hmSunGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9e3b"/>
+      <stop offset="100%" stop-color="#ff7a1a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#hmIconGrad)"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#fdf6ec" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="44" cy="22" r="7" fill="url(#hmSunGrad2)"/>
+  <polygon points="14,48 26,30 38,48" fill="#e0f2f1" opacity="0.9"/>
+  <polygon points="28,48 40,26 52,48" fill="#ffffff"/>
+  <path d="M12,46 Q 24,52 36,46 T 52,48" fill="none" stroke="#ff7a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16,26 Q 30,12 46,20" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <polygon points="46,18 52,20 48,24" fill="#ffffff"/>
+</svg>

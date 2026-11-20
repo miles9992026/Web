@@ -1,0 +1,228 @@
+/* HappyMiles Tours — Admin Dashboard Styles */
+:root {
+  --admin-primary: #0b8a8f;
+  --admin-accent: #ff7a1a;
+  --admin-bg: #f8fafc;
+  --admin-card: #ffffff;
+  --admin-text: #0f172a;
+  --admin-muted: #64748b;
+  --admin-border: #e2e8f0;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--admin-bg);
+  color: var(--admin-text);
+  margin: 0;
+  padding: 0;
+}
+
+.admin-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--admin-border);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-brand img {
+  height: 40px;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.admin-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--admin-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.stat-box-title {
+  font-size: 0.85rem;
+  color: var(--admin-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.stat-box-val {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--admin-primary);
+  margin-top: 6px;
+}
+
+.admin-controls-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--admin-border);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.status-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.status-tab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: var(--admin-muted);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.status-tab.active {
+  background: var(--admin-primary);
+  color: #fff;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  border-radius: 20px;
+  padding: 6px 16px;
+  width: 260px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.admin-table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--admin-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background: #f8fafc;
+  padding: 14px 18px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--admin-muted);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+td {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--admin-border);
+  vertical-align: middle;
+}
+
+tr:hover td {
+  background: #f8fafc;
+}
+
+.badge-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.status-pending { background: #fef3c7; color: #92400e; }
+.status-payment_submitted { background: #e0f2fe; color: #0369a1; }
+.status-paid { background: #dcfce7; color: #15803d; }
+.status-confirmed { background: #d1fae5; color: #065f46; }
+.status-cancelled { background: #fee2e2; color: #991b1b; }
+
+.utr-code {
+  font-family: monospace;
+  background: #f1f5f9;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.action-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--admin-border);
+  font-size: 0.85rem;
+  background: #fff;
+}
+
+.admin-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.admin-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.admin-modal-card {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+}

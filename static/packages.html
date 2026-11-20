@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages — HappyMiles Tours | Curated Weekend Getaways from Hyderabad</title>
+  <meta name="description" content="Explore all budget-friendly tour packages from Hyderabad by HappyMiles Tours: Coorg, Chikmagalur, Araku, Gokarna, Kerala, Ooty, and Himachal Pradesh.">
+  <link rel="icon" type="image/svg+xml" href="/static/images/logo/happymiles-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+
+  <!-- Header -->
+  <header class="navbar-wrapper scrolled">
+    <div class="container">
+      <nav class="navbar">
+        <a href="/" class="nav-brand">
+          <img src="/static/images/logo/happymiles-logo.svg" alt="HappyMiles Tours Logo" class="brand-logo-img">
+        </a>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/packages" class="nav-link active">Packages</a>
+          <a href="/#happy-travelers" class="nav-link">Happy Travelers</a>
+          <a href="https://forms.gle/8dFCPRhFAX5Rzg3W7" target="_blank" rel="noopener noreferrer" class="nav-link" data-config-link="enquiryForm" title="Custom quotes and package enquiries">Enquire ↗</a>
+          <a href="/about" class="nav-link">About Us</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
+          <a href="https://wa.me/918074016910" target="_blank" class="btn-primary">WhatsApp Us 💬</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px; min-height: 80vh;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">All Tour Packages</span>
+        <h1 class="section-title">Find Your Next Getaway</h1>
+        <p class="section-subtitle">
+          Budget-friendly, verified group trips departing weekly from Hyderabad. Select a package to see complete day-wise itineraries.
+        </p>
+
+        <!-- Quick Form Triggers -->
+        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:1.2rem;">
+          <a href="https://forms.gle/8dFCPRhFAX5Rzg3W7" target="_blank" rel="noopener noreferrer" class="btn-outline" data-config-link="enquiryForm" style="font-size:0.88rem;padding:8px 18px;">
+            📋 Custom Trip & Group Enquiry Form ↗
+          </a>
+          <a href="https://forms.gle/r97LBQdCx39JAZfQ6" target="_blank" rel="noopener noreferrer" class="btn-google-form" data-config-link="bookingForm" style="font-size:0.88rem;padding:8px 18px;">
+            🎒 Direct Google Booking Form ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-tabs" id="category-filter-tabs">
+        <button class="filter-tab-btn active" data-cat="all">All Trips</button>
+        <button class="filter-tab-btn" data-cat="Hill Station">Hill Stations</button>
+        <button class="filter-tab-btn" data-cat="Beach & Adventure">Beach & Adventure</button>
+        <button class="filter-tab-btn" data-cat="Snow & Adventure">Snow & Mountains</button>
+        <button class="filter-tab-btn" data-cat="Backwaters & Hill Station">Backwaters</button>
+      </div>
+
+      <!-- Packages Grid -->
+      <div class="packages-grid" id="all-packages-grid" style="margin-top: 2rem;">
+        <!-- Loaded via API -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Reusable Booking Modal Component Included via main.js and booking.js -->
+  <!-- Booking & Payment Sheet Modal -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="booking-modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="modal-package-name">Book Your Trip</h3>
+          <p id="modal-package-tagline" style="font-size:0.85rem;color:var(--color-ink-muted);margin:0;"></p>
+        </div>
+        <button id="booking-modal-close" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="stepper-header">
+          <div class="step-indicator active" id="step-indicator-1">
+            <div class="step-circle">1</div>
+            <div class="step-label">Travel Date</div>
+          </div>
+          <div style="flex-grow:1;height:2px;background:var(--color-border);margin:0 8px;"></div>
+          <div class="step-indicator" id="step-indicator-2">
+            <div class="step-circle">2</div>
+            <div class="step-label">Traveler Details</div>
+          </div>
+          <div style="flex-grow:1;height:2px;background:var(--color-border);margin:0 8px;"></div>
+          <div class="step-indicator" id="step-indicator-3">
+            <div class="step-circle">3</div>
+            <div class="step-label">Payment & UTR</div>
+          </div>
+        </div>
+
+        <div id="booking-step-1" class="booking-step-content">
+          <!-- Google Form Alternative Option Banner -->
+          <div class="google-form-alt-banner">
+            <div class="google-form-alt-text">
+              <span>📋 Prefer Booking via Google Form?</span>
+              <small>Submit offline details without paying online right now</small>
+            </div>
+            <a id="modal-google-form-link" href="https://forms.gle/r97LBQdCx39JAZfQ6" target="_blank" rel="noopener noreferrer" class="btn-google-form" data-config-link="bookingForm">
+              Book via Google Form ↗
+            </a>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="booking-date">Choose Your Travel Date</label>
+            <input type="date" id="booking-date" class="floating-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Number of Travelers</label>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <button type="button" id="travelers-minus" class="btn-outline" style="width:42px;height:42px;padding:0;border-radius:50%;font-size:1.2rem;">-</button>
+              <input type="number" id="booking-travelers" class="floating-input" value="1" min="1" max="25" style="text-align:center;font-weight:700;font-size:1.1rem;width:80px;" readonly>
+              <button type="button" id="travelers-plus" class="btn-outline" style="width:42px;height:42px;padding:0;border-radius:50%;font-size:1.2rem;">+</button>
+              <span id="modal-package-duration" style="font-size:0.9rem;color:var(--color-ink-muted);margin-left:auto;"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select Payment Preference</label>
+            <div class="payment-toggle-group">
+              <div id="pay-type-advance" class="payment-option-card selected">
+                <div class="payment-option-title">Advance (30%)</div>
+                <div class="payment-option-amount" id="display-advance-amt">₹2,100</div>
+                <small style="color:var(--color-ink-muted);font-size:0.75rem;">Pay balance on boarding</small>
+              </div>
+              <div id="pay-type-full" class="payment-option-card">
+                <div class="payment-option-title">Full Payment (100%)</div>
+                <div class="payment-option-amount" id="display-full-amt">₹6,999</div>
+                <small style="color:var(--color-ink-muted);font-size:0.75rem;">All set in one step</small>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="btn-step-1-next" class="btn-primary" style="width:100%;">Continue to Traveler Info →</button>
+        </div>
+
+        <div id="booking-step-2" class="booking-step-content" style="display:none;">
+          <div class="form-group">
+            <label class="form-label" for="booking-name">Lead Traveler Full Name *</label>
+            <input type="text" id="booking-name" class="floating-input" placeholder="e.g. Bharath Miryala" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="booking-phone">WhatsApp / Phone Number *</label>
+            <input type="tel" id="booking-phone" class="floating-input" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="booking-email">Email Address (Optional)</label>
+            <input type="email" id="booking-email" class="floating-input" placeholder="name@domain.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="booking-pickup">Preferred Hyderabad Boarding Point</label>
+            <select id="booking-pickup" class="floating-input">
+              <option value="Uppal">Uppal (Near Metro)</option>
+              <option value="LB Nagar">LB Nagar</option>
+              <option value="Kukatpally">Kukatpally / KPHB</option>
+              <option value="Lakdikapul">Lakdikapul</option>
+              <option value="Gachibowli">Gachibowli</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="booking-notes">Special Requests / Group Notes</label>
+            <textarea id="booking-notes" class="floating-input" rows="2" placeholder="Dietary or room sharing notes..."></textarea>
+          </div>
+          <div style="background:var(--color-sand-soft);border-radius:12px;padding:1rem;margin-bottom:1.5rem;font-size:0.88rem;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span>Total Cost:</span> <strong id="summary-total-amt">₹6,999</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:var(--color-accent);font-weight:600;">
+              <span>Due Now:</span> <strong id="summary-due-now">₹2,100</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:var(--color-ink-muted);font-size:0.8rem;margin-top:4px;">
+              <span>Balance on boarding:</span> <span id="summary-balance">₹4,899</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;">
+            <button type="button" id="btn-step-2-back" class="btn-outline" style="width:35%;">← Back</button>
+            <button type="button" id="btn-step-2-submit" class="btn-primary" style="width:65%;">Proceed to Pay →</button>
+          </div>
+        </div>
+
+        <div id="booking-step-3" class="booking-step-content" style="display:none;">
+          <div style="text-align:center;margin-bottom:1.2rem;">
+            <span style="font-size:0.85rem;color:var(--color-ink-muted);">Booking Reference:</span>
+            <div id="pay-sheet-ref" style="font-family:monospace;font-size:1.3rem;font-weight:700;color:var(--color-primary);"></div>
+            <div style="font-size:1.8rem;font-family:var(--font-heading);font-weight:700;color:var(--color-accent);margin-top:4px;" id="pay-sheet-amount">₹2,100</div>
+          </div>
+          <div class="qr-code-wrapper">
+            <img src="/static/images/payment/kotak-upi-qr-400w.webp" alt="Kotak 811 UPI QR Scanner" class="qr-image">
+            <p style="font-size:0.82rem;color:var(--color-ink-muted);margin-top:6px;">Scan to pay with any UPI app</p>
+          </div>
+          <div style="text-align:center;margin-bottom:1.2rem;">
+            <a id="upi-deep-link" href="#" class="btn-teal" style="width:100%;padding:12px;display:inline-block;">⚡ Tap to Pay via UPI App</a>
+          </div>
+          <div class="bank-details-box">
+            <div class="bank-row">
+              <span class="bank-row-label">UPI ID</span>
+              <div class="bank-row-value">
+                <span>7661981338@kotakbank</span>
+                <button class="copy-pill-btn copy-trigger" data-copy="7661981338@kotakbank">Copy</button>
+              </div>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label">Bank</span>
+              <div class="bank-row-value">Kotak Mahindra Bank</div>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label">Account No.</span>
+              <div class="bank-row-value">
+                <span>2248401328</span>
+                <button class="copy-pill-btn copy-trigger" data-copy="2248401328">Copy</button>
+              </div>
+            </div>
+            <div class="bank-row">
+              <span class="bank-row-label">IFSC</span>
+              <div class="bank-row-value">
+                <span>KKBK0007475</span>
+                <button class="copy-pill-btn copy-trigger" data-copy="KKBK0007475">Copy</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" style="background:#e0f2fe;padding:1.2rem;border-radius:12px;border:1px solid #bae6fd;">
+            <label class="form-label" for="booking-utr" style="color:#0369a1;font-weight:700;">Enter 12-Digit UPI Ref / UTR *</label>
+            <input type="text" id="booking-utr" class="floating-input" placeholder="e.g. 431289123456" required>
+          </div>
+          <button type="button" id="btn-submit-utr" class="btn-primary" style="width:100%;padding:14px;">Submit Reference & Complete Booking ✓</button>
+        </div>
+
+        <div id="booking-success-screen" style="display:none;text-align:center;padding:1.5rem 0;">
+          <div style="font-size:3.5rem;color:var(--color-success);margin-bottom:1rem;">🎉</div>
+          <h3>Payment Submitted!</h3>
+          <p style="color:var(--color-ink-muted);font-size:0.95rem;margin:1rem auto 1.5rem;">
+            Booking Reference: <strong id="success-booking-ref" style="color:var(--color-primary);"></strong>
+          </p>
+          <a id="btn-whatsapp-confirm" href="#" target="_blank" class="btn-primary" style="padding:14px 28px;background:#25d366;">
+            💬 Open WhatsApp Summary (918074016910)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top: 6rem;">
+    <div class="container">
+      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem;font-size:0.9rem;">
+        <a href="https://forms.gle/8dFCPRhFAX5Rzg3W7" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary-light);" data-config-link="enquiryForm">Trip Enquiry Form ↗</a>
+        <a href="https://forms.gle/r97LBQdCx39JAZfQ6" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary-light);" data-config-link="bookingForm">Google Booking Form ↗</a>
+        <a href="/terms" style="color:#a3bac2;">Terms</a>
+        <a href="/privacy" style="color:#a3bac2;">Privacy</a>
+        <a href="/refund" style="color:#a3bac2;">Refund Policy</a>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HappyMiles Tours. Turning Miles into Memories!</div>
+        <div><a href="/" style="color:var(--color-accent);">Back to Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/booking.js"></script>
+  <script>
+    let allPackagesData = [];
+    fetch('/api/packages')
+      .then(r => r.json())
+      .then(pkgs => {
+        allPackagesData = pkgs;
+        renderCatalog(pkgs);
+      });
+
+    function renderCatalog(pkgs) {
+      const grid = document.getElementById('all-packages-grid');
+      grid.innerHTML = pkgs.map(p => {
+        const highlights = JSON.parse(p.highlights || '[]');
+        return `
+          <div class="package-card" data-category="${p.category}">
+            <div class="card-media-wrapper">
+              <img src="${p.image_card}" alt="${p.name}" class="card-img" loading="lazy">
+              <span class="card-badge">${p.badge || 'Popular'}</span>
+              <span class="card-duration">⏱️ ${p.duration}</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-meta">
+                <span class="card-category">${p.category}</span>
+                <span class="card-sample-pill">Verified</span>
+              </div>
+              <h3 class="card-title">${p.name}</h3>
+              <p class="card-tagline">${p.tagline || ''}</p>
+              <div class="card-highlights">
+                ${highlights.slice(0, 3).map(h => `
+                  <div class="highlight-point">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>${h}</span>
+                  </div>
+                `).join('')}
+              </div>
+              <div class="card-footer">
+                <div class="price-box">
+                  ${p.original_price ? `<span class="price-original">₹${p.original_price.toLocaleString()}</span>` : ''}
+                  <div class="price-current">₹${p.price.toLocaleString()} <span class="price-unit">/ person</span></div>
+                </div>
+                <div style="display:flex;gap:8px;">
+                  <a href="/packages/${p.slug}" class="btn-outline" style="padding:8px 14px;font-size:0.85rem;">Details</a>
+                  <button onclick="openBookingModal('${p.slug}')" class="btn-primary" style="padding:8px 16px;font-size:0.85rem;">Book Seat</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Category Filter Buttons
+    document.querySelectorAll('#category-filter-tabs .filter-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#category-filter-tabs .filter-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.getAttribute('data-cat');
+        if (cat === 'all') {
+          renderCatalog(allPackagesData);
+        } else {
+          renderCatalog(allPackagesData.filter(p => p.category === cat));
+        }
+      });
+    });
+  </script>
+</body>
+</html>
