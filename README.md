@@ -101,6 +101,15 @@ To offer maximum accessibility for travelers and corporate/group planners, the a
 
 Both URLs are centralized and dynamically fetched from `/api/config` (`ENQUIRY_FORM_URL`, `BOOKING_FORM_URL` in `.env`), ensuring zero hardcoding across the frontend.
 
+### 3.2 Official Government Registrations & Compliance
+
+HappyMiles Tours is officially registered and licensed with both Central and State government authorities:
+1. **MSME Udyam Registration (Govt. of India):** `UDYAM-TS-20-0227292` (Micro enterprise — Services, NIC 79120: Tour operator activities)
+   - Route: `/certificates/udyam` (Serves official PDF)
+2. **Telangana Shops & Establishments Act, 1988 (Labour Dept., Govt. of Telangana):** `SEA/MED/ALO/QB/1440094/2026` (Travel Agency for booking operations)
+   - Route: `/certificates/telangana-establishment` (Serves official PDF)
+3. Dedicated showcase section on `/about#registrations` and verification badges on `/contact`.
+
 ---
 
 ## 4. Beginner-Friendly Deployment Guide
