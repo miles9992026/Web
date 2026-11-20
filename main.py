@@ -391,6 +391,30 @@ def serve_refund():
 def serve_admin():
     return FileResponse("static/admin.html")
 
+# ----------------- REGISTRATION CERTIFICATES (Direct PDF Serving) -----------------
+
+@app.get("/certificates/udyam", response_class=FileResponse)
+def serve_udyam_certificate():
+    """Serve official MSME Udyam Registration Certificate (Government of India)"""
+    return FileResponse(
+        "static/Certificates/msme-udyam-registration-certificate.pdf",
+        media_type="application/pdf",
+        filename="HappyMiles-Tours-MSME-Udyam-Certificate.pdf"
+    )
+
+@app.get("/certificates/telangana-establishment", response_class=FileResponse)
+def serve_telangana_certificate():
+    """Serve official Telangana Labour Department Registration Certificate (Form-I)"""
+    return FileResponse(
+        "static/Certificates/telangana-shops-establishment-certificate.pdf",
+        media_type="application/pdf",
+        filename="HappyMiles-Tours-Telangana-Shops-Establishment-Certificate.pdf"
+    )
+
+@app.get("/certificates", response_class=FileResponse)
+def serve_certificates_page():
+    return FileResponse("static/about.html")
+
 # Mount static folder
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

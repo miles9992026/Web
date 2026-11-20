@@ -271,7 +271,54 @@ sequenceDiagram
 
 ---
 
-## 6. Dynamic Configuration Architecture (No Hardcoding)
+## 6. Official Government Registrations & Compliance Architecture
+
+HappyMiles Tours is a legally recognized, registered tour operator with active registrations under both Central (Government of India) and State (Government of Telangana) authorities.
+
+```mermaid
+flowchart TD
+    subgraph CentralGov["Government of India"]
+        MSME["Ministry of MSME\nUdyam Registration: UDYAM-TS-20-0227292\nMicro Enterprise (Services) • NIC 79120"]
+    end
+
+    subgraph StateGov["Government of Telangana"]
+        Labour["Labour Department (Act 1988)\nReg No: SEA/MED/ALO/QB/1440094/2026\nCategory: Travel Agency (Booking Operations)"]
+    end
+
+    MSME --> Cert1["PDF Route: /certificates/udyam\n(msme-udyam-registration-certificate.pdf)"]
+    Labour --> Cert2["PDF Route: /certificates/telangana-establishment\n(telangana-shops-establishment-certificate.pdf)"]
+
+    Cert1 --> UI["Showcase: about.html#registrations & contact.html"]
+    Cert2 --> UI
+```
+
+### 6.1 Verified Certificate Specifications
+
+1. **MSME Udyam Registration Certificate**
+   - **Issuing Authority:** Ministry of Micro, Small and Medium Enterprises (MSME), Government of India
+   - **Udyam Registration Number:** `UDYAM-TS-20-0227292`
+   - **Enterprise Name:** HAPPYMILES TOURS
+   - **Enterprise Classification:** Micro Enterprise — Services
+   - **National Industry Classification (NIC):** 79120 (Tour Operator Activities)
+   - **Registration Date:** 13/11/2026 (Date of Incorporation: 09/07/2026)
+   - **Registered Address:** Flat/Door/Block No. 4-125, HAPPYMILES TOURS, Shivanagar, Hyderabad, Medchal-Malkajgiri, Telangana 500072
+   - **Direct Endpoint:** `/certificates/udyam` (Served via FastAPI `FileResponse` with `application/pdf`)
+   - **Static Path:** `/static/Certificates/msme-udyam-registration-certificate.pdf`
+
+2. **Telangana Shops & Establishments Registration Certificate**
+   - **Issuing Authority:** Labour Department, Government of Telangana (Form-I under Telangana Shops & Establishments Act, 1988)
+   - **Registration Number:** `SEA/MED/ALO/QB/1440094/2026`
+   - **Establishment Name:** HAPPY MILES TOURS
+   - **Category:** Travel Agency (for booking operations)
+   - **Registered Employer:** Miryala Bharath
+   - **Registration & Signed Date:** 20/11/2026 (Commencement Date: 13/11/2026)
+   - **Registered Address:** HAPPY MILES TOURS, 15, Kukatpally, Jagathgiri Gutta, Qutubullapur, Medchal-Malkajgiri, Hyderabad
+   - **Direct Endpoint:** `/certificates/telangana-establishment` (Served via FastAPI `FileResponse` with `application/pdf`)
+   - **Static Path:** `/static/Certificates/telangana-shops-establishment-certificate.pdf`
+
+---
+
+## 7. Dynamic Configuration Architecture (No Hardcoding)
 
 To prevent URL obsolescence and ensure immediate updates without editing frontend templates, the application uses a dynamic client-server configuration architecture:
 
@@ -333,7 +380,7 @@ function initDynamicConfig() {
 
 ---
 
-## 7. Administrative Dashboard Capabilities
+## 8. Administrative Dashboard Capabilities
 
 The `/admin` portal (protected by HTTP Basic Authentication) provides complete control over the operational pipeline:
 
@@ -353,7 +400,7 @@ The `/admin` portal (protected by HTTP Basic Authentication) provides complete c
 
 ---
 
-## 8. Complete API Specification
+## 9. Complete API Specification
 
 | Method | Endpoint | Access | Description |
 | :--- | :--- | :--- | :--- |
@@ -363,6 +410,9 @@ The `/admin` portal (protected by HTTP Basic Authentication) provides complete c
 | `POST` | `/api/bookings` | Public (Rate-Limited) | Creates a new booking with backend-calculated pricing. |
 | `POST` | `/api/bookings/{ref}/utr` | Public | Traveler submits 12-digit UTR reference; updates status to `payment_submitted`. |
 | `GET` | `/api/bookings/{ref}` | Public | Checks current booking status. |
+| `GET` | `/certificates/udyam` | Public | Serves official MSME Udyam Registration Certificate (PDF). |
+| `GET` | `/certificates/telangana-establishment` | Public | Serves official Telangana Labour Dept. Registration Certificate (PDF). |
+| `GET` | `/certificates` | Public | Direct redirect / access to official certificates on About page. |
 | `GET` | `/api/admin/bookings` | Protected (Basic Auth) | Lists all bookings with status filter and search query (`?status_filter=...&q=...`). |
 | `PATCH` | `/api/admin/bookings/{ref}/status` | Protected (Basic Auth) | Updates booking status (`pending`, `payment_submitted`, `paid`, `confirmed`, `cancelled`). |
 | `GET` | `/api/admin/bookings/export` | Protected (Basic Auth) | Downloads CSV passenger manifest with timestamped filename. |
@@ -373,7 +423,7 @@ The `/admin` portal (protected by HTTP Basic Authentication) provides complete c
 
 ---
 
-## 9. Quality Assurance & System Verification
+## 10. Quality Assurance & System Verification
 
 All core endpoints, static file routes, Google Forms integrations, and interactive components have been systematically validated:
 
@@ -382,20 +432,22 @@ All core endpoints, static file routes, Google Forms integrations, and interacti
 [PASS]  GET  /                                              Status: 200 OK
 [PASS]  GET  /packages                                      Status: 200 OK
 [PASS]  GET  /packages/coorg-chikmagalur                    Status: 200 OK
-[PASS]  GET  /about                                         Status: 200 OK
-[PASS]  GET  /contact                                       Status: 200 OK
+[PASS]  GET  /about                                         Status: 200 OK (With Cert Cards)
+[PASS]  GET  /contact                                       Status: 200 OK (With Reg Box)
 [PASS]  GET  /terms                                         Status: 200 OK
 [PASS]  GET  /privacy                                       Status: 200 OK
 [PASS]  GET  /refund                                        Status: 200 OK
 [PASS]  GET  /admin                                         Status: 200 OK
+[PASS]  GET  /certificates/udyam                            Status: 200 OK (PDF Application)
+[PASS]  GET  /certificates/telangana-establishment          Status: 200 OK (PDF Application)
 [PASS]  GET  /api/config                                    Status: 200 OK (With Form URLs)
 [PASS]  GET  /api/packages                                  Status: 200 OK
 [PASS]  GET  /api/packages/coorg-chikmagalur                Status: 200 OK
 [PASS]  POST /api/bookings                                  Status: 200 OK (Server Calculations)
 [PASS]  POST /api/bookings/{ref}/utr                        Status: 200 OK
 [PASS]  GET  /api/admin/bookings/export (CSV)               Status: 200 OK (322 bytes)
-[PASS]  GET  /static/images/payment/kotak-upi-qr-400w.webp  Status: 200 OK
-[PASS]  GET  /static/images/logo/happymiles-logo.svg        Status: 200 OK
+[PASS]  GET  /static/Certificates/msme-udyam-...pdf         Status: 200 OK
+[PASS]  GET  /static/Certificates/telangana-shops-...pdf    Status: 200 OK
 [PASS]  GET  /nonexistent-route                             Status: 404 Custom Page
 ==========================================================================
 ```
@@ -408,7 +460,7 @@ All core endpoints, static file routes, Google Forms integrations, and interacti
 
 ---
 
-## 10. Deployment & Operational Runbook
+## 11. Deployment & Operational Runbook
 
 ### 10.1 Local Execution
 - **One-Click Startup:** Double-click [`run.bat`](file:///C:/Users/AKSHARA/OneDrive/Desktop/Bharath/run.bat) in the project root.
